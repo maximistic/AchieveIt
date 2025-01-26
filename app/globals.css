@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* Light Theme Colors */
+    --color-bg: #F8F8FC;
+    --color-bg-secondary: #EFECFE;
+    --color-accent: #D6D0FD;
+    --color-accent-secondary: #FEECBA;
+    --color-text: #1C1C28;
+    --color-text-secondary: #4A4A5D;
+  }
+  
+  [data-theme="dark"] {
+    /* Dark Theme Colors */
+    --color-bg: #1C1C28;
+    --color-bg-secondary: #2C2C3A;
+    --color-accent: #6C63FF;
+    --color-accent-secondary: #FFBE76;
+    --color-text: #E4E4EB;
+    --color-text-secondary: #B0B0C3;
+  }  
