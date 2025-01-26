@@ -9,10 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        bg: "var(--color-bg)",
+        bgSecondary: "var(--color-bg-secondary)",
+        accent: "var(--color-accent)",
+        accentSecondary: "var(--color-accent-secondary)",
+        text: "var(--color-text)",
+        textSecondary: "var(--color-text-secondary)",
       },
     },
   },
+  darkMode: ["class", '[data-theme="dark"]'],
   plugins: [],
 } satisfies Config;
