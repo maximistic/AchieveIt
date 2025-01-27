@@ -39,7 +39,7 @@ const ThemeToggleButton = () => {
         </button>
         
         {isOpen && (
-          <div className="absolute bottom-10 right-0 bg-[var(--color-bg-secondary)] border border-[var(--color-accent)] rounded-md shadow-lg">
+          <div className="absolute top-10 right-0 bg-[var(--color-bg-secondary)] border border-[var(--color-accent)] rounded-md shadow-lg">
             {themes.map((t) => (
               <button
                 key={t.value}
@@ -63,7 +63,7 @@ export default ThemeToggleButton;
 
 /*
 Features Explanation:
- - As a user, Wanted to make sure the dropdown (or the pop up) to close whenever clicked outside of it. dropdownRef will track the dropdown container. 
- - wanted to keep leave the icons simple and not overcomplicate it, yet give some colors to make it pop a lil.
+ - As a user, Wanted to make sure the dropdown (or the pop up) closes whenever clicked outside of it. dropdownRef will track the dropdown container. 
+ - wanted to keep leave the icons simple and not overcomplicate em, yet give some colors to make it pop a lil.
 
 */
