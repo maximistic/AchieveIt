@@ -4,7 +4,7 @@ import * as React from 'react'
 function page() {
   return (
     <div className='bg-[var(--color-bg)] text-[var(--color-text)]'>
-        Sidebar
+        
     </div>
   )
 }

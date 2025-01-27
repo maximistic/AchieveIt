@@ -29,32 +29,30 @@ const ThemeToggleButton = () => {
   ];
 
   return (
-    <div className="fixed">
-      <div className="relative" ref={dropdownRef}>
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-2 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text)] border border-[var(--color-accent)] flex items-center gap-2"
-        >
-          {themes.find((t) => t.value === theme)?.icon}
-        </button>
-        
-        {isOpen && (
-          <div className="absolute top-10 right-0 bg-[var(--color-bg-secondary)] border border-[var(--color-accent)] rounded-md shadow-lg">
-            {themes.map((t) => (
-              <button
-                key={t.value}
-                onClick={() => {
-                  setTheme(t.value as "light" | "dark" | "system");
-                  setIsOpen(false);
-                }}
-                className={`w-full p-2 text-left hover:bg-[var(--color-accent)] flex items-center gap-2 ${t.className}`}
-              >
-                {t.icon}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
+    <div className="relative" ref={dropdownRef}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="p-2 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text)] border border-[var(--color-accent)] flex items-center gap-2"
+      >
+        {themes.find((t) => t.value === theme)?.icon}
+      </button>
+      
+      {isOpen && (
+        <div className="absolute top-10 right-0 bg-[var(--color-bg-secondary)] border border-[var(--color-accent)] rounded-md shadow-lg">
+          {themes.map((t) => (
+            <button
+              key={t.value}
+              onClick={() => {
+                setTheme(t.value as "light" | "dark" | "system");
+                setIsOpen(false);
+              }}
+              className={`w-full p-2 text-left hover:bg-[var(--color-accent)] flex items-center gap-2 ${t.className}`}
+            >
+              {t.icon}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
