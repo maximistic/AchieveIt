@@ -3,29 +3,18 @@ import * as React from "react";
 import { useTheme } from "../context/ThemeProvider";
 import { FaRegMoon, FaRegSun } from "react-icons/fa";
 import { GrSystem } from "react-icons/gr";
+import useClickOutside from "@/app/hooks/useClickOutside";
 
 const ThemeToggleButton = () => {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
-
-  React.useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  useClickOutside(dropdownRef, () => setIsOpen(false));
 
   const themes = [
-    { value: "light", icon: <FaRegSun className="text-yellow-500" />, className: "hover:bg-yellow-100" },
-    { value: "dark", icon: <FaRegMoon className="text-gray-700 dark:text-gray-100" />, className: "hover:bg-gray-100 dark:hover:bg-gray-800" },
-    { value: "system", icon: <GrSystem className="text-blue-500" />, className: "hover:bg-blue-100" },
+    { value: "light", icon: <FaRegSun className="text-yellow-500" size={22}/>, className: "hover:bg-yellow-100" },
+    { value: "dark", icon: <FaRegMoon className="text-gray-700 dark:text-gray-100" size={22}/>, className: "hover:bg-gray-100 dark:hover:bg-gray-800" },
+    { value: "system", icon: <GrSystem className="text-blue-500" size={22}/>, className: "hover:bg-blue-100" },
   ];
 
   return (
