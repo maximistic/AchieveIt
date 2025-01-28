@@ -19,10 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased`}>
         <ThemeProvider>
-          <Sidebar />
           <Navbar />
+          <Sidebar />
           {children}
         </ThemeProvider>
+
       </body>
     </html>
   );
