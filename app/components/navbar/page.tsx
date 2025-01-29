@@ -7,18 +7,20 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   return (
-    <nav className="bg-[var(--color-bg-secondary)] p-4 flex justify-between items-center m-8 rounded-xl">
-      <div className="flex items-center gap-4">
-        <HamburgerMenu />
-        ACHIEVEIT
-      </div>
+    <div className="bg-[var(--color-bg)] p-8 text-[var(--color-text)]">
+      <nav className="bg-[var(--color-bg-secondary)] p-5 flex justify-between items-center rounded-xl">
+        <div className="flex items-center gap-4">
+          <HamburgerMenu />
+          <b>ACHIEVEIT</b>
+        </div>
 
-      <div className="flex items-center gap-4">
-        <NotificationIcon />
-        <ThemeToggleButton />
-        <UserDropdown />
-      </div>
-    </nav>
+        <div className="flex items-center gap-4">
+          <NotificationIcon />
+          <ThemeToggleButton />
+          <UserDropdown />
+        </div>
+      </nav>
+    </div>
   );
 };
 
