@@ -9,7 +9,7 @@ const BottomNav: React.FC = () => {
   );
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[var(--color-bg-secondary)] flex justify-around py-2">
+    <div className="fixed md:hidden bottom-4 left-4 right-4 bg-[var(--color-bg-secondary)] flex justify-around items-center rounded-t-xl z-50 p-2">
       {mobileItems.map((item, index) => (
         <SidebarIcon key={index} icon={item.icon} label={item.label} path={item.path} />
       ))}

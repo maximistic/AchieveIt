@@ -5,7 +5,7 @@ import { sidebarItems } from "./SidebarData";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen w-16 bg-[var(--color-bg-secondary)] flex flex-col items-center justify-between py-4 rounded-xl">
+    <div className="hidden md:flex fixed left-0 top-0 h-screen w-16 bg-[var(--color-bg-secondary)] flex-col items-center justify-between py-4 rounded-xl">
       <div className="flex flex-col items-center space-y-4">
         {sidebarItems.map((item, index) => (
           <SidebarIcon key={index} icon={item.icon} label={item.label} path={item.path} />
