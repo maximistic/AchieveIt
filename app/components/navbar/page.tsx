@@ -7,7 +7,7 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const Navbar = () => {
   return (
-    <div className="bg-[var(--color-bg)] p-8 text-[var(--color-text)]">
+    <div className="fixed top-0 left-16 right-0 z-10 bg-[var(--color-bg)] p-4 text-[var(--color-text)]">
       <nav className="bg-[var(--color-bg-secondary)] p-5 flex justify-between items-center rounded-xl">
         <div className="flex items-center gap-4">
           <HamburgerMenu />
