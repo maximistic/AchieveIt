@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Sidebar from "./components/sidebar/page";
 import Navbar from "./components/navbar/page";
+import BottomNav from "./components/sidebar/BottomNav";
 
 export const metadata: Metadata = {
   title: "AchieveIt",
@@ -17,13 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className="antialiased flex min-h-screen">
         <ThemeProvider>
-          <Navbar />
           <Sidebar />
-          {children}
+          <div className="flex flex-col flex-1 min-h-screen">
+            <Navbar />
+            <main className="flex-1 p-4 overflow-auto">
+              {children}
+            </main>
+            <BottomNav />
+          </div>
         </ThemeProvider>
-
       </body>
     </html>
   );
