@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "./context/ThemeProvider"; 
 import "./globals.css";
 
-import Sidebar from "./components/sidebar/page";
-import Navbar from "./components/navbar/page";
-import BottomNav from "./components/sidebar/BottomNav";
+import Navbar from "./components/Navbar/page";
+import Sidebar from "./components/Sidebar/page";
 
 export const metadata: Metadata = {
   title: "AchieveIt",
@@ -19,16 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased flex min-h-screen">
-        <ThemeProvider>
-          <Sidebar />
-          <div className="flex flex-col flex-1 min-h-screen">
             <Navbar />
-            <main className="flex-1 p-4 overflow-auto">
+            <Sidebar />
+            <main className="flex-1 overflow-auto">
               {children}
             </main>
-            <BottomNav />
-          </div>
-        </ThemeProvider>
       </body>
     </html>
   );

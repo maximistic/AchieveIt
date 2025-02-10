@@ -1,26 +1,9 @@
-"use client";
-import * as React from "react";
-import SidebarIcon from "./SidebarIcon";
-import { sidebarItems } from "./SidebarData";
+import * as React from 'react'
 
-const Sidebar = () => {
+function page() {
   return (
-    <div className="hidden md:flex fixed left-0 top-0 h-screen w-16 bg-[var(--color-bg-secondary)] flex-col items-center justify-between py-4 rounded-xl">
-      <div className="flex flex-col items-center space-y-4">
-        {sidebarItems.map((item, index) => (
-          <SidebarIcon key={index} icon={item.icon} label={item.label} path={item.path} />
-        ))}
-      </div>
-    </div>
-  );
-};
+    <div className='bg-[var(--color-bg-secondary)]'>Sidebar</div>
+  )
+}
 
-export default Sidebar;
-
-
-/*
-Sidebar icons - dashboard, goals, habits, calendar, analytics, help
-
-Mobile view:
-bottom nav - dashboard, goals, habits, calendar
-*/
+export default page
