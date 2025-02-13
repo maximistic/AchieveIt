@@ -1,11 +1,19 @@
-import * as React from 'react'
+import * as React from 'react';
+import NavIcons from './NavIcons';
 
-function page() {
+function Navbar() {
   return (
-    <div className='bg-[var(--color-bg-secondary)] flex-row p-8'>
-        Navbar
+    <div className="sticky top-4 z-50 px-4 md:pl-12">
+      <div className="
+        w-full h-16
+        bg-[var(--color-bg-secondary)] border border-[var(--color-border)]
+        flex items-center 
+        rounded-xl
+      ">
+        <NavIcons />
+      </div>
     </div>
-  )
+  );
 }
 
-export default page
+export default Navbar;

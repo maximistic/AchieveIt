@@ -1,9 +1,17 @@
-import * as React from 'react'
+import * as React from 'react';
+import SideIcons from './SideIcons';
 
-function page() {
+function Sidebar() {
   return (
-    <div className='bg-[var(--color-bg-secondary)]'>Sidebar</div>
-  )
+    <div className="
+      hidden md:block
+      fixed left-4 top-4 bottom-4
+      w-20
+      bg-[var(--color-bg-secondary)] rounded-xl border border-[var(--color-border)]
+    ">
+      <SideIcons />
+    </div>
+  );
 }
 
-export default page
+export default Sidebar;
