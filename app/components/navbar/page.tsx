@@ -8,7 +8,7 @@ function Navbar() {
         w-full h-16
         bg-[var(--color-bg-secondary)] border border-[var(--color-border)]
         flex items-center 
-        rounded-xl
+        rounded-2xl
       ">
         <NavIcons />
       </div>
