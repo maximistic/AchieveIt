@@ -19,7 +19,7 @@ const NavIcons: React.FC = () => {
   };
 
   return (
-    <div className="nav-icons flex justify-between items-center w-full">
+    <div className="flex justify-between items-center w-full">
       <p
         className='font-bold p-4 cursor-pointer'
         onClick={handleLogoClick}
