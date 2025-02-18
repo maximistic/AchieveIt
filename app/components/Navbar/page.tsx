@@ -7,7 +7,7 @@ function Navbar() {
       <div className="
         w-full h-16
         bg-[var(--color-bg-secondary)] border border-[var(--color-border)]
-        flex items-center 
+        flex items-center
         rounded-2xl
       ">
         <NavIcons />
