@@ -9,7 +9,6 @@ import { TiArrowRepeatOutline } from "react-icons/ti";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import gsap from "gsap";
 
-// Reuse the same ICONS array
 const ICONS = [
   { icon: <MdOutlineDashboard className="w-6 h-6" />, link: "/search", name: "Dashboard" },
   { icon: <IoCalendarNumberOutline className="w-6 h-6" />, link: "/notifications", name: "Calendar" },
@@ -33,23 +32,27 @@ const BottomNav: React.FC = () => {
 
   return (
     <div
-      ref={navRef}
-      className="md:hidden fixed bottom-0 left-0 w-full bg-[var(--color-text)] border-t border-[var(--color-border)] py-3"
+    ref={navRef}
+    className="md:hidden fixed bottom-4 w-full px-4"
     >
-      <div className="flex justify-around items-center">
+    <div className="bg-[var(--color-text)] border-t border-[var(--color-border)] py-3 
+    rounded-xl p-4 max-w-[95%]">
+        <div className="flex justify-around items-center">
         {ICONS.map(({ icon, link, name }, index) => (
-          <button
+            <button
             key={index}
             onClick={() => router.push(link)}
             className="flex flex-col items-center text-[var(--color-accent-secondary)] group"
             aria-label={name}
-          >
+            >
             {icon}
             <span className="text-xs opacity-70">{name}</span>
-          </button>
+            </button>
         ))}
-      </div>
+        </div>
     </div>
+    </div>
+
   );
 };
 
