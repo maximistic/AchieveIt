@@ -44,7 +44,7 @@ const SideIcons: React.FC = () => {
             bg-[var(--color-bg-secondary)] text-[var(--color-text)] 
             border-2 border-[var(--color-text)] rounded 
             font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 
-            whitespace-nowrap z-2000">
+            whitespace-nowrap z-2000 cursor-none">
               {name}
             </span>
           </button>
@@ -60,7 +60,7 @@ const SideIcons: React.FC = () => {
         <span className="absolute left-full px-2 py-1 
         bg-[var(--color-bg-secondary)] text-[var(--color-text)] 
         border-2 border-[var(--color-text)] rounded font-bold opacity-0 
-        group-hover:opacity-100 transition-opacity duration-300 z-2000">
+        group-hover:opacity-100 transition-opacity duration-300 z-2000 cursor-none">
           Logout
         </span>
       </button>
